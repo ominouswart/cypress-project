@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('checkExist', (comp) => {
+    cy.get(comp).should('exist');
+});
+
+Cypress.Commands.add('getElement', (element, contain) => {
+    cy.get(element).contains(contain);
+});
+
+Cypress.Commands.add('inputInfo', (comp, info) => {
+    cy.get(comp).type(info);
+});
