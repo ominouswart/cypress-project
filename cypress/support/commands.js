@@ -35,3 +35,7 @@ Cypress.Commands.add('getElement', (element, contain) => {
 Cypress.Commands.add('inputInfo', (comp, info) => {
     cy.get(comp).type(info);
 });
+
+Cypress.Commands.add('checkUrl', (url) => {
+    cy.url().should('include', url);
+});
