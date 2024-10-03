@@ -3,7 +3,8 @@ const pageUrl = "https://www.automationexercise.com";
 describe("user navigation", () => {
   beforeEach(() => {
     cy.visit(pageUrl);
-    cy.checkExist('body');
+    cy.checkExist('header');
+    cy.checkExist('section');
   });
 
   it('navigates to Test Cases page', () => {
